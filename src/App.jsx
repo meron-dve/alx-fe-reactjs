@@ -1,7 +1,7 @@
-/*
+import UserProfile from './UserProfile';
 import Header from './Header';
 import MainContent from './MainContent';
-import Footer from './Footer';*/
+import Footer from './Footer';
 import WelcomeMessage from './WelcomeMessage';
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
@@ -13,7 +13,26 @@ function App() {
 
   return (
     <>
+    <div>
     <WelcomeMessage />
+    
+    </div>
+    <div>
+      <Header />
+    </div>
+    <div>
+      <MainContent />
+
+    </div>
+    <div>
+       <UserProfile 
+       name="Alice" 
+       age="25" 
+       bio="Loves hiking and photography" />
+    </div>
+    <div>
+      <Footer />
+    </div>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
