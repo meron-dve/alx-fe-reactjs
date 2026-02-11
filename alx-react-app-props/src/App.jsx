@@ -2,12 +2,12 @@
 import './App.css'
 
 import UserContext from './components/UserContext';
-
+import UserProfile from './components/UserProfile';
 import ProfilePage from './components/ProfilePage';
 
 
 function App() {
- 
+  
       const userData = {
     name: "Jane Doe",
     email: "jane.doe@example.com"
@@ -18,11 +18,13 @@ function App() {
      <UserContext.Provider value={userData}>
       <ProfilePage />
     </UserContext.Provider>
+     <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
   
   
-     
-    
-    
+      
+      
+         
+      
     </>
   )
 }
