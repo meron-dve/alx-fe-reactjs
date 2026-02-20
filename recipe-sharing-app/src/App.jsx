@@ -2,6 +2,8 @@ import SearchBar from "./components/SearchBar";
 import RecipeList from "./components/RecipeList";
 import SearchBar from "./components/SearchBar";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import FavoritesList from "./components/FavoritesList";
+import RecommendationsList from "./components/RecommendationsList";
 
 
 import AddRecipeForm from "./components/AddRecipeForm";
@@ -19,6 +21,8 @@ function App() {
                 <AddRecipeForm />
                 <SearchBar />
                 <RecipeList />
+                <FavoritesList />
+                <RecommendationsList />
               </>
             }
           />
@@ -28,14 +32,11 @@ function App() {
             path="/recipe/:id"
             element={<RecipeDetails />}
           />
+ 
         </Routes>
-      </div>
-    </Router>
-  );
-}
+        )
+      }
 
-export default App;
-  );
-}
+
 
 export default App;
