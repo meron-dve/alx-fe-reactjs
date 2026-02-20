@@ -1,20 +1,39 @@
-[
-  {
+{
+  "0": {
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
     "image": "https://via.placeholder.com/300"
   },
-  {
+  "1": {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken cooked in a smooth buttery and creamy tomato based gravy.",
     "image": "https://via.placeholder.com/300"
   },
-  {
+  "2": {
     "id": 3,
     "title": "Avocado Toast",
     "summary": "Toasted bread topped with smashed avocado, salt, pepper and lemon juice.",
     "image": "https://via.placeholder.com/300"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^7.13.0"
+  },
+  "name": "recipe-sharing-app",
+  "version": "1.0.0",
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "eslint.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.4",
+    "vite": "^7.3.1"
   }
-]
+}

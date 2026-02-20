@@ -7,28 +7,34 @@ import { useState } from 'react';
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
 
-    const handleSubmit = (event) => {
-      event.preventDefault();
-      addRecipe({ id: Date.now(), title, description });
-      setTitle('');
-      setDescription('');
-    };
+   addRecipe({
+  id: Date.now(),
+  title,
+  description,
+  ingredients: ingredients.split(',').map(i => i.trim()),
+  prepTime: Number(prepTime),
+});
 
+    const [ingredients, setIngredients] = useState('');
+const [prepTime, setPrepTime] = useState('');
     return (
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          placeholder="Title"
-        />
-        <textarea
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          placeholder="Description"
-        />
-        <button type="submit">Add Recipe</button>
-      </form>
+      <><input
+        type="text"
+        placeholder="Ingredients (comma separated)"
+        value={ingredients}
+        onChange={(e) => setIngredients(e.target.value)} /><br /><br /><input
+          type="number"
+          placeholder="Preparation Time (minutes)"
+          value={prepTime}
+          onChange={(e) => setPrepTime(e.target.value)} /></>
+
+
+
+
+
+
+
+     
     );
 };
 export default AddRecipeForm;
