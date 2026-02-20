@@ -1,6 +1,6 @@
 import SearchBar from "./components/SearchBar";
 import RecipeList from "./components/RecipeList";
-
+import SearchBar from "./components/SearchBar";
 function App() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">
