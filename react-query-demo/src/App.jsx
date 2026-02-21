@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import PostsComponent from "./components /PostsComponent";
 
@@ -9,7 +10,7 @@ function App() {
       <h1>React Query Demo</h1>
 
       <button onClick={() => setShowPosts(!showPosts)}>
-        Toggle Posts Component
+        Toggle Posts
       </button>
 
       {showPosts && <PostsComponent />}

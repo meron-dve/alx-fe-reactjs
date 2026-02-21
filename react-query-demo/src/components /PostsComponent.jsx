@@ -1,3 +1,4 @@
+
 import { useQuery } from "@tanstack/react-query";
 
 const fetchPosts = async () => {
@@ -6,7 +7,7 @@ const fetchPosts = async () => {
   );
 
   if (!response.ok) {
-    throw new Error("Network response was not ok");
+    throw new Error("Failed to fetch posts");
   }
 
   return response.json();
@@ -23,26 +24,24 @@ const PostsComponent = () => {
   } = useQuery({
     queryKey: ["posts"],
     queryFn: fetchPosts,
-    staleTime: 1000 * 60 * 2, // 2 minutes cache
+    staleTime: 1000 * 60, // 1 minute cache
   });
 
   if (isLoading) return <p>Loading posts...</p>;
-
   if (isError) return <p>Error: {error.message}</p>;
 
   return (
     <div>
-      <h2>Posts List</h2>
+      <h2>Posts</h2>
 
       <button onClick={() => refetch()}>
         {isFetching ? "Refreshing..." : "Refetch Posts"}
       </button>
 
       <ul>
-        {data.slice(0, 10).map((post) => (
+        {data.slice(0, 5).map((post) => (
           <li key={post.id}>
             <strong>{post.title}</strong>
-            <p>{post.body}</p>
           </li>
         ))}
       </ul>
